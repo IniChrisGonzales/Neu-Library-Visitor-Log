@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.dark.900');
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.dark.700');
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.dark.600');
+  }
+
+  body {
+    @apply bg-dark-950 text-white;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-neu-blue via-neu-purple to-neu-cyan bg-clip-text text-transparent;
+  }
+}
